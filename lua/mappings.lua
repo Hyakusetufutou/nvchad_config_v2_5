@@ -14,6 +14,7 @@ nomap("i", "<C-h>")
 nomap("i", "<C-l>")
 nomap("i", "<C-j>")
 nomap("i", "<C-k>")
+nomap("t", "<ESC>")
 
 
 local map = vim.keymap.set
@@ -32,5 +33,7 @@ map("n", "[b", function()
 end, { desc = "Buffer Goto prev" })
 map("n", "<leader>fg", "<cmd>Telescope git_files<cr>", { desc = "Telescope Git files" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Nvimtree Toggle window" })
+map("n", "]g", function() require("gitsigns").next_hunk() end, { desc = "Next Git hunk" })
+map("n", "[g", function() require("gitsigns").prev_hunk() end, { desc = "Previous Git hunk" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
