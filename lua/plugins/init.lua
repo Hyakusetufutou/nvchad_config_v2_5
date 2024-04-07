@@ -11,7 +11,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
+      -- require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },
@@ -52,7 +52,7 @@ return {
         telescope.load_extension(ext)
       end
     end,
-  }, 
+  },
   {
     "hadronized/hop.nvim",
     opts = {},

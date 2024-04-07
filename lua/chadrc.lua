@@ -5,8 +5,13 @@
 local M = {}
 
 M.ui = {
-	theme = "kanagawa",
-
+	theme = "tokyonight",
+  statusline = {
+    theme = "minimal", -- default/vscode/vscode_colored/minimal
+  },
+  nvdash = {
+    load_on_startup = true,
+  }
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },

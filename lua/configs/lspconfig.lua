@@ -16,12 +16,12 @@ local on_attach = function(client, bufnr)
   map("n", "K", vim.lsp.buf.hover, opts "Lsp hover information")
   map("n", "gi", function() require("telescope.builtin").lsp_implementations({ reuse_win = true }) end, opts "Lsp Go to implementation")
   map("n", "<leader>sh", vim.lsp.buf.signature_help, opts "Lsp Show signature help")
-  map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts "Lsp Add workspace folder")
-  map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts "Lsp Remove workspace folder")
-
-  map("n", "<leader>wl", function()
-    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, opts "Lsp List workspace folders")
+  -- map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts "Lsp Add workspace folder")
+  -- map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts "Lsp Remove workspace folder")
+  --
+  -- map("n", "<leader>wl", function()
+  --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+  -- end, opts "Lsp List workspace folders")
 
   map("n", "<leader>D", function() require("telescope.builtin").lsp_type_definitions({ reuse_win = true }) end, opts "Lsp Go to type definition")
 
